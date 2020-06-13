@@ -59,7 +59,7 @@
     group: mysql
     mode: 0755
     setype: mysqld_db_t
-  when: mysql_datadir =! ''
+  when: mysql_datadir != ''
 
 - name: Set ownership on slow query log file (if configured).
   file:
